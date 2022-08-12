@@ -35,8 +35,7 @@ namespace FootballWorldCupScoreBoard
 
             if (Matches.Any())
             {
-                Match matchToFinish = Matches.Where(m => m.Id.Equals(match.Id))
-                    .First();
+                Match matchToFinish = Matches.FirstOrDefault(m => m.Id.Equals(match.Id));
 
                 if (matchToFinish != null)
                 {
@@ -57,8 +56,7 @@ namespace FootballWorldCupScoreBoard
 
             if (Matches.Any())
             {
-                Match matchToUpdate = Matches.Where(m => m.Id.Equals(match.Id))
-                    .First();
+                Match matchToUpdate = Matches.FirstOrDefault(m => m.Id.Equals(match.Id));
 
                 if (matchToUpdate != null)
                 {
